@@ -4,7 +4,7 @@
     "keywords": ["zf2", "module", "zendesk", "api"],
     "require": {
         "php": "~5.4",
-        "zendframework/zend-servicemanager": "^2.6",
+        "zendframework/zend-servicemanager": "^2.5",
         "zendesk/zendesk_api_client_php": ">=1.0.0"
     },
     "require-dev": {
