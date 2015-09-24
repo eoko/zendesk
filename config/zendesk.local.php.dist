@@ -1,0 +1,17 @@
+<?php
+/**
+ * Zendesk - ZF2 module wrapper around Zendesk PHP SDK
+ *
+ * @link      http://github.com/mtymek/Zendesk
+ * @copyright Copyright (c) 2014 Mateusz Tymek
+ * @license   BSD 2-Clause
+ */
+
+// replace placeholders with values from your Zendesk settings page
+return [
+    'zendesk' => [
+        'subdomain' => 'ZENDESK_SUBDOMAIN',
+        'username'  => 'ZENDESK_USERNAME',
+        'token'     => 'ZENDESK_TOKEN',
+    ],
+];
