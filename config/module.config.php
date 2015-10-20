@@ -7,11 +7,6 @@ use Zendesk\API\HttpClient as Client;
 
 
 return [
-    'zendesk' => [
-        'subdomain' => 'dedistack',
-        'username' => 'pierre.freund@dedistack.io',
-        'token' => '3C36DrA82qw0RP0oQui1tV62jzKH4JzkEM5AayXr',
-    ],
     'service_manager' => [
         'factories' => [
             Client::class => ZendeskApiClientFactory::class,

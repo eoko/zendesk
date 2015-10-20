@@ -13,6 +13,7 @@ class Ticket implements ArraySerializableInterface
 {
 
     protected $id;
+    protected $status;
     protected $subject = '';
     protected $description = '';
     protected $extra_fields = [];
@@ -89,6 +90,23 @@ class Ticket implements ArraySerializableInterface
     }
 
     /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+
+    /**
      * Exchange internal values from provided array
      *
      * @param  array $array
@@ -98,6 +116,7 @@ class Ticket implements ArraySerializableInterface
     {
         $this->id           = isset($array['id']) && is_int($array['id'])                       ? $array['id'] : null;
         $this->subject      = isset($array['subject']) && is_string($array['subject'])          ? $array['subject'] : '';
+        $this->status       = isset($array['status']) && is_string($array['status'])            ? $array['status'] : '';
         $this->description  = isset($array['description']) && is_string($array['description'])  ? $array['description'] : '';
 
         unset($array['description'], $array['subject'], $array['id']);
@@ -115,6 +134,7 @@ class Ticket implements ArraySerializableInterface
             'id' => $this->id,
             'subject' => $this->subject,
             'description' => $this->description,
+            'status' => $this->status,
         ];
 
         return array_merge($array, $this->extra_fields);
